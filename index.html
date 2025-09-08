@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niagara Lithuanians - Community Blog</title>
+    <meta name="description" content="Discover the rich Lithuanian heritage and community stories from the Niagara region. Join our vibrant community of Lithuanian-Canadians.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://niagaralithuanians.com/">
+    <meta property="og:title" content="Niagara Lithuanians - Community Blog">
+    <meta property="og:description" content="Discover the rich Lithuanian heritage and community stories from the Niagara region.">
+    <meta property="og:image" content="https://niagaralithuanians.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://niagaralithuanians.com/">
+    <meta property="twitter:title" content="Niagara Lithuanians - Community Blog">
+    <meta property="twitter:description" content="Discover the rich Lithuanian heritage and community stories from the Niagara region.">
+    <meta property="twitter:image" content="https://niagaralithuanians.com/images/og-image.jpg">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-flag"></i>
+                    <span>Niagara Lithuanians</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="articles.html" class="nav-link">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Niagara Lithuanians</h1>
+            <p class="hero-subtitle">Discover the rich heritage, stories, and vibrant community of Lithuanian-Canadians in the Niagara region</p>
+            <div class="hero-buttons">
+                <a href="articles.html" class="btn btn-primary">Read Our Stories</a>
+                <a href="about.html" class="btn btn-secondary">Learn About Us</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-placeholder">
+                <i class="fas fa-mountain"></i>
+                <p>Niagara Region</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="featured-articles">
+        <div class="container">
+            <h2 class="section-title">Featured Stories</h2>
+            <div class="articles-grid" id="featured-articles">
+                <!-- Articles will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Community Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Years of Heritage</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Events Hosted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Stories Shared</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Articles -->
+    <section class="recent-articles">
+        <div class="container">
+            <h2 class="section-title">Recent Articles</h2>
+            <div class="articles-list" id="recent-articles">
+                <!-- Articles will be loaded dynamically -->
+            </div>
+            <div class="text-center">
+                <a href="articles.html" class="btn btn-outline">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Connected</h2>
+                <p>Subscribe to our newsletter for the latest community news, events, and stories.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Niagara Lithuanians</h3>
+                    <p>Celebrating Lithuanian heritage and culture in the Niagara region since 1998.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="articles.html">Articles</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Lithuanian Language</a></li>
+                        <li><a href="#">Cultural Events</a></li>
+                        <li><a href="#">Community Directory</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Niagara Region, ON, Canada</p>
+                    <p><i class="fas fa-envelope"></i> info@niagaralithuanians.com</p>
+                    <p><i class="fas fa-phone"></i> (905) 555-0123</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Niagara Lithuanians. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/youtube-embed.js"></script>
+</body>
+</html>
