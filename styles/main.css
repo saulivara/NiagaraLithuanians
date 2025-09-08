@@ -312,6 +312,20 @@ section {
     padding: var(--spacing-xxl) 0;
 }
 
+/* Page header spacing under fixed navbar */
+.page-header {
+    padding: calc(var(--spacing-xxl) + 40px) 0 var(--spacing-xl);
+    margin-top: 70px; /* offset for fixed navbar */
+}
+
+.page-header h1 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-header p {
+    margin-top: 0;
+}
+
 .section-title {
     text-align: center;
     color: var(--primary-color);
