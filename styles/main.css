@@ -96,6 +96,10 @@ a:hover {
     color: var(--primary-light);
 }
 
+.our-story {
+    margin-top: 70px;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
