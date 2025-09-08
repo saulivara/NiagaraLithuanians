@@ -189,6 +189,12 @@ a:hover {
     font-size: 1.5rem;
 }
 
+.logo-img {
+    width: 22px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;

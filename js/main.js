@@ -191,7 +191,9 @@ function loadRecentArticles() {
 // Format Date
 function formatDate(dateString) {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
+    const lang = (window.i18n && window.i18n.getLang && window.i18n.getLang()) || 'en';
+    const locale = lang === 'lt' ? 'lt-LT' : 'en-US';
+    return date.toLocaleDateString(locale, {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
@@ -264,6 +266,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.transition = 'opacity 0.5s ease';
         document.body.style.opacity = '1';
     }, 100);
+});
+
+// Re-render dynamic sections on language change
+document.addEventListener('languageChange', function() {
+    loadFeaturedArticles();
+    loadRecentArticles();
 });
 
 // Export articles data for use in other pages

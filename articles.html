@@ -18,7 +18,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html">
-                    <i class="fas fa-flag"></i>
+                    <img src="images/LithuanianFlag100.png" alt="Lithuanian flag" class="logo-img" loading="lazy" decoding="async">
                     <span>Niagara Lithuanians</span>
                 </a>
             </div>
@@ -51,8 +51,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Community Articles</h1>
-            <p>Discover stories, traditions, and insights from our vibrant Lithuanian-Canadian community</p>
+            <h1 data-i18n="articles.header.title">Community Articles</h1>
+            <p data-i18n="articles.header.sub">Discover stories, traditions, and insights from our vibrant Lithuanian-Canadian community</p>
         </div>
     </section>
 
@@ -61,12 +61,12 @@
         <div class="container">
             <div class="filter-controls">
                 <div class="search-box">
-                    <input type="text" id="search-input" placeholder="Search articles...">
+                    <input type="text" id="search-input" placeholder="Search articles..." data-i18n-placeholder="articles.search">
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="category-filter">
                     <select id="category-filter">
-                        <option value="">All Categories</option>
+                        <option value="" data-i18n="articles.allCategories">All Categories</option>
                         <option value="Events">Events</option>
                         <option value="Culture">Culture</option>
                         <option value="Arts & Crafts">Arts & Crafts</option>
@@ -86,7 +86,7 @@
                 <!-- Articles will be loaded dynamically -->
             </div>
             <div class="load-more-container">
-                <button class="btn btn-outline" id="load-more-btn">Load More Articles</button>
+                <button class="btn btn-outline" id="load-more-btn" data-i18n="articles.loadMore">Load More Articles</button>
             </div>
         </div>
     </section>
