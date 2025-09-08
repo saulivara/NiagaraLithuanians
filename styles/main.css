@@ -7,15 +7,15 @@
 
 :root {
     /* Colors */
-    --primary-color: #c62828; /* vibrant red */
-    --primary-light: #e53935; /* lighter red */
-    --primary-dark: #8e0000; /* deep red */
-    --secondary-color: #f6c90e; /* warm golden yellow */
-    --accent-color: #2e7d32; /* lively green */
+    --primary-color: #2e6d4b; /* muted Lithuanian green */
+    --primary-light: #4c8c6a; /* lighter green */
+    --primary-dark: #1e4f38; /* deep green */
+    --secondary-color: #d9a441; /* warm Lithuanian gold */
+    --accent-color: #c43a3a; /* soft Lithuanian red */
     --text-dark: #2c2c2c;
     --text-light: #666666;
     --text-muted: #999999;
-    --bg-light: #f9fafb;
+    --bg-light: #f7eedb; /* gentle cream */
     --bg-white: #ffffff;
     --border-color: #e9ecef;
     --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -44,6 +44,12 @@
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
+
+    /* Soft tints (for gentle backgrounds) */
+    --tint-red: #faeeee;
+    --tint-gold: #fbf4e3;
+    --tint-green: #eaf2ec;
+    --accent-tint-10: rgba(46, 109, 75, 0.10); /* primary tint for hovers */
 }
 
 body {
@@ -105,7 +111,7 @@ a:hover {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: var(--primary-color);
     color: white;
     box-shadow: var(--shadow-light);
 }
@@ -163,6 +169,12 @@ a:hover {
     height: 70px;
 }
 
+.lang-toggle {
+    margin-left: var(--spacing-md);
+    padding: 6px 10px;
+    line-height: 1;
+}
+
 .nav-logo a {
     display: flex;
     align-items: center;
@@ -195,7 +207,7 @@ a:hover {
 .nav-link:hover,
 .nav-link.active {
     color: var(--primary-color);
-    background: rgba(44, 85, 48, 0.1);
+    background: var(--accent-tint-10);
 }
 
 .hamburger {
@@ -214,24 +226,31 @@ a:hover {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 56vh;
+    background: linear-gradient(135deg, var(--tint-red) 0%, var(--tint-gold) 50%, var(--tint-green) 100%);
+    padding: var(--spacing-lg) 0;
+    margin-top: 70px;
+}
+
+.hero .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    background: linear-gradient(135deg, #fff 0%, rgba(198, 40, 40, 0.06) 35%, rgba(46, 125, 50, 0.06) 100%);
-    padding: var(--spacing-xxl) 0;
-    margin-top: 70px;
+    align-content: center;
+    min-height: 40vh;
+    gap: var(--spacing-xl);
 }
 
 .hero-content {
     max-width: 680px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    align-self: center;
 }
 
 .hero-title {
     font-size: 3.5rem;
-    color: var(--primary-color);
+    color: var(--primary-dark);
     margin-bottom: var(--spacing-md);
     animation: fadeInUp 1s ease;
 }
@@ -254,19 +273,20 @@ a:hover {
     justify-content: center;
     align-items: center;
     padding: var(--spacing-md);
+    align-self: center;
 }
 
 .hero-placeholder {
-    width: 420px;
-    height: 310px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 60%, var(--accent-color) 100%);
+    display: none;
+}
+
+.hero-photo {
+    width: 100%;
+    max-width: 540px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: var(--radius-xl);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    box-shadow: var(--shadow-heavy);
+    box-shadow: var(--shadow-medium);
     animation: fadeInUp 1s ease 0.6s both;
 }
 
@@ -334,11 +354,11 @@ section {
 .article-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 60%, var(--accent-color) 100%);
+    background: linear-gradient(135deg, var(--tint-red) 0%, var(--tint-gold) 50%, var(--tint-green) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--primary-dark);
     font-size: 3rem;
 }
 
@@ -367,8 +387,8 @@ section {
 
 /* Stats Section */
 .stats {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 40%, var(--accent-color) 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--tint-red) 0%, var(--tint-gold) 50%, var(--tint-green) 100%);
+    color: var(--primary-dark);
 }
 
 .stats-grid {
@@ -424,12 +444,12 @@ section {
 .article-item-image {
     width: 120px;
     height: 80px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 60%, var(--accent-color) 100%);
+    background: linear-gradient(135deg, var(--tint-red) 0%, var(--tint-gold) 50%, var(--tint-green) 100%);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--primary-dark);
     font-size: 1.5rem;
     flex-shrink: 0;
 }
@@ -457,18 +477,18 @@ section {
 
 /* Newsletter */
 .newsletter {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 60%, var(--accent-color) 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--tint-red) 0%, var(--tint-gold) 50%, var(--tint-green) 100%);
+    color: var(--primary-dark);
     text-align: center;
 }
 
 .newsletter-content h2 {
-    color: white;
+    color: var(--primary-dark);
     margin-bottom: var(--spacing-sm);
 }
 
 .newsletter-content p {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-dark);
     margin-bottom: var(--spacing-xl);
     font-size: 1.125rem;
 }
@@ -701,15 +721,25 @@ section {
     .nav-menu.active {
         left: 0;
     }
+
+    .lang-toggle {
+        position: fixed;
+        right: var(--spacing-md);
+        top: 16px;
+        z-index: 1001;
+    }
     
     .nav-menu li {
         margin: var(--spacing-sm) 0;
     }
     
-    .hero {
+    .hero .container {
         grid-template-columns: 1fr;
+    }
+    .hero {
         text-align: center;
-        padding: var(--spacing-xl) 0;
+        padding: var(--spacing-md) 0 var(--spacing-sm);
+        min-height: 50vh;
     }
     
     .hero-title {
@@ -721,9 +751,8 @@ section {
         align-items: center;
     }
     
-    .hero-placeholder {
-        width: 300px;
-        height: 200px;
+    .hero-photo {
+        max-width: 100%;
     }
     
     .articles-grid {

@@ -38,21 +38,22 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
+                    <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="articles.html" class="nav-link">Articles</a>
+                    <a href="articles.html" class="nav-link" data-i18n="nav.articles">Articles</a>
                 </li>
                 <li class="nav-item">
-                    <a href="events.html" class="nav-link">Events</a>
+                    <a href="events.html" class="nav-link" data-i18n="nav.events">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
                 </li>
             </ul>
+            <button class="btn btn-outline lang-toggle" id="lang-toggle" aria-label="Switch language" data-i18n="nav.lang">LT</button>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -63,18 +64,17 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Welcome to Niagara Lithuanians</h1>
-            <p class="hero-subtitle">Discover the rich heritage, stories, and vibrant community of Lithuanian-Canadians in the Niagara region</p>
-            <div class="hero-buttons">
-                <a href="articles.html" class="btn btn-primary">Read Our Stories</a>
-                <a href="about.html" class="btn btn-secondary">Learn About Us</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero.title">Welcome to Niagara Lithuanians</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Discover the rich heritage, stories, and vibrant community of Lithuanian-Canadians in the Niagara region</p>
+                <div class="hero-buttons">
+                    <a href="articles.html" class="btn btn-primary" data-i18n="buttons.readStories">Read Our Stories</a>
+                    <a href="about.html" class="btn btn-secondary" data-i18n="buttons.learnAbout">Learn About Us</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="hero-placeholder">
-                <i class="fas fa-mountain"></i>
-                <p>Niagara Region</p>
+            <div class="hero-image">
+                <img src="images/GkA086OXcAA-Ydf.jpeg" alt="Niagara Region Lithuanian community" loading="lazy" decoding="async" class="hero-photo">
             </div>
         </div>
     </section>
@@ -186,6 +186,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/youtube-embed.js"></script>
 </body>
 </html>
